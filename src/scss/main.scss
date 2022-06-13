@@ -1,33 +1,192 @@
 // This is where you can import/use other stylesheets or write your scss code
 // Variables/resets/components, etc...
 
+@use 'reset';
+@use 'config';
 
 
+body {
+    font-family: config.$main-font-family;
+    position: relative;
+    padding-bottom: 3rem;
+    min-height: 95vh;
+}
 
-// Bootstrap is included in the package.json as a dependency. 
-// You can use it if you'd like or `npm uninstall bootstrap` and write all the css yourself. 
-// If you choose to not use it, you can remove/ignore everything listed below:
+// header
 
-@import '../../node_modules/bootstrap/scss/bootstrap';
+.navbar {
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        padding: .5rem;
+        li {
+            padding: 0.5rem;
+            a {
+                text-decoration: none;
+                font-size: 0.8rem;
+                color: config.$nav-footer-color;
+            }
+        }
+    }
+    
+}
 
-// // Custom.scss
-// // Option B: Include parts of Bootstrap
+// main
 
-// // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-// @import "../node_modules/bootstrap/scss/functions";
+.main-image {
+    background-image: url(/src/images/header.jpg);
+    height: 15rem;
+    width: 100vw;
+    background-size: cover;
+    background-position: left;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+.card-container, .article-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
 
-// // 2. Include any default variable overrides here
+}
 
-// // 3. Include remainder of required Bootstrap stylesheets
-// @import "../node_modules/bootstrap/scss/variables";
-// @import "../node_modules/bootstrap/scss/mixins";
+.card {
+    width: 80%;
+    height: 15rem;
+    background-color: config.$card-background-color;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+    padding: 0.8rem;
+    .mountains {
+        background-image: url(/src/images/mountain.jpg);
+        width: 100%;
+        height: 8rem;
+        margin: 0 auto 0.5rem auto;
+        background-size: cover;
 
-// // 4. Include any optional Bootstrap components as you like
-// @import "../node_modules/bootstrap/scss/root";
-// @import "../node_modules/bootstrap/scss/reboot";
-// @import "../node_modules/bootstrap/scss/type";
-// @import "../node_modules/bootstrap/scss/images";
-// @import "../node_modules/bootstrap/scss/containers";
-// @import "../node_modules/bootstrap/scss/grid";
+    }
+    .surfer {
+        background-image: url(/src/images/surfer.jpg);
+        width: 100%;
+        height: 8rem;
+        margin: 0 auto 0.5rem auto;
+        background-size: cover;
+    }
+    .tree {
+        background-image: url(/src/images/tree.jpg);
+        width: 100%;
+        height: 8rem;
+        margin: 0 auto 0.5rem auto;
+        background-size: cover;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
 
-// // 5. Add additional custom code here
+// .article-container {
+//     padding-bottom: 2.5rem;
+//     position: relative;
+// }
+.aside {
+    width: 80%;
+    margin: auto;
+    padding: 0.8rem;
+    border: 1px solid config.$card-text-color;
+    p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    }
+}
+
+.article {
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    font-size: 0.9rem;
+    p {
+        margin-top: 0.5rem;
+    }
+}
+
+// footer
+
+
+.footer {
+    background-color: config.$nav-footer-color;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content:space-around;
+        padding: 0.5rem;
+        li {
+            padding: 0.5rem;
+            a {
+                text-decoration: none;
+                font-size: 0.8rem;
+                color: white;
+            }
+        }
+    }
+    
+}
+
+// media queries 
+
+@media (min-width: 768px) {
+    .navbar {
+        ul {
+            justify-content: flex-end;
+        }
+    }
+
+    .main-image {
+        br {
+            display:none;
+        }
+    }
+
+    .article-container {
+        flex-direction: row;
+    }
+    .card {
+        width: 32rem;
+        height: fit-content;
+        display: flex;
+        div {
+            margin: 0 1rem;
+        }
+        .mountains, .surfer, .tree {
+            margin: 0;
+        }
+    }
+
+    .footer {
+        ul {
+            justify-content: center;
+        }
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    .main-image {
+        background-position: top;
+    }
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 69rem;
+        margin: 1rem auto;
+    }
+    .article-container {
+        width: 69rem;
+        margin: 1rem auto;
+    }
+  }
+
