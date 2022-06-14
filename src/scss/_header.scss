@@ -1,0 +1,31 @@
+
+
+.navbar {
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        padding: .5rem;
+        li {
+            padding: 0.5rem;
+            a {
+                text-decoration: none;
+                font-size: 0.8rem;
+                color: config.$nav-footer-color;
+            }
+        }
+    }
+    
+}
+
+.main-image {
+    background-image: url(/src/images/header.jpg);
+    height: 15rem;
+    width: 100vw;
+    background-size: cover;
+    background-position: left;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}

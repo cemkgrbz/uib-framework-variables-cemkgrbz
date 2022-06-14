@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+    .navbar {
+        ul {
+            justify-content: flex-end;
+        }
+    }
+
+    .main-image {
+        br {
+            display:none;
+        }
+    }
+
+    .article-container {
+        flex-direction: row;
+    }
+    .card {
+        width: 32rem;
+        height: fit-content;
+        display: flex;
+        div {
+            margin: 0 1rem;
+        }
+        .mountains, .surfer, .tree {
+            margin: 0;
+        }
+    }
+
+    .footer {
+        ul {
+            justify-content: center;
+        }
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    .main-image {
+        background-position: top;
+    }
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 69rem;
+        margin: 1rem auto;
+    }
+    .article-container {
+        width: 69rem;
+        margin: 1rem auto;
+    }
+  }
+

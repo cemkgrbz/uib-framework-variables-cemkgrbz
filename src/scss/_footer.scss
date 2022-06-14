@@ -1,0 +1,28 @@
+body {
+    font-family: config.$main-font-family;
+    position: relative;
+    padding-bottom: 3rem;
+    min-height: 95vh;
+}
+
+.footer {
+    background-color: config.$nav-footer-color;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content:space-around;
+        padding: 0.5rem;
+        li {
+            padding: 0.5rem;
+            a {
+                text-decoration: none;
+                font-size: 0.8rem;
+                color: white;
+            }
+        }
+    }
+    
+}
