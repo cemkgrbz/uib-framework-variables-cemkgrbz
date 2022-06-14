@@ -27,4 +27,4 @@ Create a mockup website as seen in the [reference image folder](./images_referen
 
 ![mockup-image-tablet](./images_reference/tablet.png)
 
-![mockup-image-desktop](./images_reference/desktop.png)
+![mockup-image-desktop](./images_reference/desktop.png) 
