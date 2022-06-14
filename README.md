@@ -7,7 +7,7 @@ https://cemkgrbz.github.io/uib-framework-variables-cemkgrbz/
 Create a mockup website as seen in the [reference image folder](./images_reference).
 
 **Instructions**:
-
+ 
 - To run this project, use `npm run start`
 - Use sass to create the mockup.
 - Make use of nesting and variables where possible.
