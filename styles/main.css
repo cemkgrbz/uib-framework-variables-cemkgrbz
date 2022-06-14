@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.navbar ul li {
+  padding: 0.5rem;
+}
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #016690;
+}
+
+.main-image {
+  background-image: url(/src/images/header.jpg);
+  height: 15rem;
+  width: 100vw;
+  background-size: cover;
+  background-position: left;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.card-container, .article-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.card {
+  width: 80%;
+  height: 15rem;
+  background-color: #e0ddb2;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+.card .mountains {
+  background-image: url(/src/images/mountain.jpg);
+  width: 100%;
+  height: 8rem;
+  margin: 0 auto 0.5rem auto;
+  background-size: cover;
+}
+.card .surfer {
+  background-image: url(/src/images/surfer.jpg);
+  width: 100%;
+  height: 8rem;
+  margin: 0 auto 0.5rem auto;
+  background-size: cover;
+}
+.card .tree {
+  background-image: url(/src/images/tree.jpg);
+  width: 100%;
+  height: 8rem;
+  margin: 0 auto 0.5rem auto;
+  background-size: cover;
+}
+.card p {
+  font-size: 0.9rem;
+}
+
+.aside {
+  width: 80%;
+  margin: auto;
+  padding: 0.8rem;
+  border: 1px solid #dad6ab;
+}
+.aside p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.article {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+  font-size: 0.9rem;
+}
+.article p {
+  margin-top: 0.5rem;
+}
+
+body {
+  font-family: Arial;
+  position: relative;
+  padding-bottom: 3rem;
+  min-height: 95vh;
+}
+
+.footer {
+  background-color: #016690;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.footer ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+.footer ul li {
+  padding: 0.5rem;
+}
+.footer ul li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .navbar ul {
+    justify-content: flex-end;
+  }
+
+  .main-image br {
+    display: none;
+  }
+
+  .article-container {
+    flex-direction: row;
+  }
+
+  .card {
+    width: 32rem;
+    height: fit-content;
+    display: flex;
+  }
+  .card div {
+    margin: 0 1rem;
+  }
+  .card .mountains, .card .surfer, .card .tree {
+    margin: 0;
+  }
+
+  .footer ul {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .main-image {
+    background-position: top;
+  }
+
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 69rem;
+    margin: 1rem auto;
+  }
+
+  .article-container {
+    width: 69rem;
+    margin: 1rem auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
