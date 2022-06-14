@@ -1,3 +1,5 @@
+@use 'config';
+
 body {
     font-family: config.$main-font-family;
     position: relative;
